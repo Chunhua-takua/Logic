@@ -1,0 +1,210 @@
+\documentclass[
+    a4paper,
+    twoside
+    ]{article}
+
+\usepackage[UTF8, scheme=plain]{ctex}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linktocpage=true
+}
+
+\usepackage[
+    twoside,
+    left = 28mm,
+    right = 26mm,
+    top = 37mm,
+    bottom = 35mm
+    ]{geometry}
+
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\usepackage{afterpage}
+\newcommand\myemptypage{
+    \null
+    \thispagestyle{empty}
+    \addtocounter{page}{-1}
+    \newpage
+}
+
+\usepackage{pifont}
+
+% 自定义 subsubsection 的格式；居中，楷书
+% \titleformat*{\subsubsection}{\filcenter\kaishu}
+
+% 不显示自动编号 且 能自动生成目录
+% \setcounter{secnumdepth}{0}
+
+\newcommand\subtitle[1]{{\songti ——#1}}
+
+% 黑体2号
+\title{\zihao{2}\heiti 明确词项的逻辑方法 \\ \subtitle{定义}}
+% \author{Zhuo Ya}
+\date{}
+
+% 中文目录
+% \renewcommand\contentsname{目录}
+
+% 行距
+\renewcommand{\baselinestretch}
+{1.25}
+
+\fancyhf{}
+\pagestyle{fancy} %fancyhdr宏包新增的页面风格
+
+
+\begin{document}
+    \maketitle
+    \thispagestyle{empty}
+
+    % 另起一页
+    \newpage
+
+    \myemptypage
+
+    % 目录 罗马数字页码
+    \setcounter{page}{1}
+    \pagenumbering{Roman}
+    % center foot
+    \cfoot{\thepage}
+    % foot decorative lines
+    \renewcommand{\footrulewidth}{1pt}
+    % \fancyhead[L]{\textbf{Contents}}
+    \fancyhead[OR]{\textbf{明确词项的逻辑方法——定义}}
+    \fancyhead[EL]{\textbf{明确词项的逻辑方法——定义}}
+    \tableofcontents
+    \newpage
+
+    % 正文 阿拉伯数字页码
+    \setcounter{page}{1}
+    \pagenumbering{arabic}
+
+    % 页脚页码：Page n of m
+    \cfoot{Page \thepage\ of \pageref{LastPage}}
+
+    \section{ 明确词项的逻辑方法 }
+        {
+            词项明确是正确地进行推理或论证的必要条件，逻辑学对运用词项的基本要求就是``词项要明确''。所谓明确词项，就是明确词项的内涵和外延，确定它的意义。
+        }
+        \subsection{限制和概括}
+            
+            % \paragraph{\fangsong\zihao{5} 
+                属种关系的词项内涵和外延间具有一种反变关系，即一个词项的内涵越多，外延就越小；内涵越少，外延就越大。
+
+                通过增加内涵使一个外延较大的属词项过渡到外延较小的种词项，称为词项的限制。
+
+                通过减少内涵使一个外延较小的种词项过度到外延较大的属词项，称为词项的概括。
+            % }
+
+        \subsection{定义}
+        \subsubsection{什么是定义}
+        {
+            定义是用简洁的语句明确词项内涵的逻辑方法。词项的内涵就是词项表达的概念，而概念是对象特有属性的反映，因此给词项下定义，也就是揭示词项表达的概念所反映的对象的特有属性。例如：
+
+            {\fangsong\zihao{5}
+                \ding{172}商品就是为交换而生产的劳动产品。
+            }
+
+            定义由被定义项、定义项和定义联项三部分组成。被定义项就是需要明确内涵的词项，如上例中的``商品''。定义项就是用来揭示被定义项内孙的词项，如上例中的``为交换而生产的劳动产品''。定义联项就是表示被定义项和定义项之间的必然联系的判断词，如上例中的``就是''。用$D_S$表示被定义项，用$D_P$表示定义项，定义的结构可以用公式表示如下：
+
+            $D_S$就是$D_P$
+
+            这是定义的规范形式，在证言中一个定义还可以用以下的句式来表达：``所谓$D_S$，即（是指）$D_P$''，``$D_P$叫做（称为）$D_S$''等。
+
+
+        }
+
+        \subsubsection{
+            定义的一般方法
+        }
+        \paragraph{
+            属加种差定义的步骤
+        }~{}
+        \newline
+        {
+            定义的一般步骤是：要给词项$D_S$下定义，就先确定$D_S$的邻近属词项P（实际上就是对$D_S$进行一次概括），然后找到$D_S$指称的对象与P指称的其他对象的差别（即$D_S$所指对象的特有属性，逻辑上称为``种差'' ），并将这种差别与P构成一个偏正词组以作为定义项。
+
+            这种先确定属词项再找种差的定义方法就叫做``属加种差定义''。
+
+        }
+        \paragraph{
+            揭示``种差''的几种方法
+        }~{}
+        \newline
+        {
+            种差就是被定义项所指对象的某种特有属性。事物的特有属性是多方面的，因此，确定种差的方法也是多样的。这就形成了属加种差定义的几种类型：
+
+            a. 性质定义——所揭示的种差是某类事物所特有的性质。例如：
+
+            {\fangsong\zihao{5} 
+                人就是能够制造和使用生产工具的动物。
+
+                法人就是根据法律参加民事活动的组织。
+            }
+
+            b. 发生定义——所揭示的种差是某类事物产生或形成的原因或过程。例如：
+
+            {
+                \fangsong\zihao{5}
+                水是由2个氢原子和1个氧原子化合而成的化合物。
+            }
+
+            c. 关系定义——所揭示的种差是某类事物与它类事物所特有的关系。例如：
+
+            {
+                \fangsong\zihao{5}
+                直系亲属是指和本人有直接血缘关系或婚姻关系的人。
+            }
+
+            d. 功用定义——所揭示的种差是某类事物所特有的功用。例如：
+            
+            {
+                \fangsong\zihao{5}
+                商品就是为交换而生产的劳动产品。
+            }
+        }
+        \paragraph{
+            定义的规则
+        }~{}
+        \newline
+        {
+            传统逻辑制定了定义的规则，它们是对词项正确进行实质定义的必要条件。
+
+            \begin{tabular}
+                {ll}
+            {规则1} & {定义项的外延和被定义项的外延必须是全同关系。}\\
+            {规则2} & {定义项中不得直接或间接包含被定义项。}\\
+            {规则3} & {定义项中不得有含混的词语，不能用比喻。}\\
+            {规则4} & {定义不得用否定句式。}
+
+            \end{tabular}
+        }
+
+        \subsubsection{
+            语词定义
+        }
+        {
+            语词定义是明确语词含义的逻辑方法，可以分为说明的语词定义和支付宝的语词定义两种。
+
+            （1）说明的语词定义——对已有确定意义的语词加以说明。例如：
+
+            {
+                \fangsong\zihao{5}
+                \ding{172} ``乌托邦''原为希腊语，``乌''是没有，``托邦''是地方，``乌托邦''是指没有的地方，也就是一种空想、虚构。
+            }
+
+            （2）规定的语词定义——对某个语词的特殊含义或特别用法作出支付宝性的解释。例如：
+
+            {
+                \fangsong\zihao{5}
+                \ding{172} 法律上所说的``犯罪中止''，是指行为人在犯罪过程中自动放弃犯罪或者自动有效地防止犯罪结果发生；而``犯罪未遂''是指行为已经着手被告犯罪而由于犯罪分子意志以外的原因则未能得逞。
+            }
+
+            规定的语词定义所定义的对象，通常可以做不同的理解，但在某一特定的范围内，说话人可以给它加以暂时的规定，以避免歧义。这种定义在法律法规、教科书、论文论著中经常使用。
+
+        }
+
+\end{document}
